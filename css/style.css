@@ -1,0 +1,814 @@
+@font-face {
+  font-family: :'Geometria-Medium';
+  src: url('../fonts/Geometria-Medium.otf') format('otf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: :'Geometria';
+  src: url('../fonts/Geometria.otf') format('otf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: :'Philosopher';
+  src: url('../fonts/Philosopher-Bold.otf') format('otf');
+  font-weight: bold;
+}
+
+@media (min-width: 1440px) {
+  body {
+      background-color: #f7f7f7;
+      background-image: url('../img/bg-desktop@1x.jpg');
+      background-position: 589px -124px;
+      background-size: cover;
+      padding-bottom: 84px;
+  }
+
+  .logo {
+    position: absolute;
+
+    left: 50%;
+    margin-left: -505px;
+    top: 50%;
+    margin-top: 34px;
+
+    z-index: 12;
+  }
+  .visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    -webkit-clip-path: inset(100%);
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .main-nav {
+    position: relative;
+    display: flex;
+  }
+
+  .main-nav__toggle {
+    position: absolute;
+    top: 168px;
+    right: 90px;
+
+    width: 54px;
+    height: 54px;
+
+    background: url('../img/burger-menu.svg');
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+  }
+
+  .site-wrapper {
+    width: 1440px;
+    margin: 0 auto;
+
+    position: relative;
+  }
+
+  .slider {
+    position: relative;
+  }
+
+  .slider__first-slide {
+    position: absolute;
+
+    width: 800px;
+    height: 525px;
+    left: 72px;
+    top: 166px;
+    
+    background-image: url('../img/hall.jpg');
+  }
+
+  .slider__first-slide::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+
+    background-color: #f7e611;
+    opacity: 0.8;
+  }
+
+  .slider__second-slide {
+    position: absolute;
+    width: 860px;
+    height: 490px;
+    top: 251px;
+    right: 88px;
+    
+    background-image: url('../img/motorbike.jpg');
+
+    z-index: 1;
+  }
+
+  .slider__second-slide::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+
+    background-color: #f7e611;
+    opacity: 0.8;
+  }
+
+  .first-image {
+    background-image: url('../img/hall.jpg');
+  }
+
+  .second-image {
+    background-image: url('../img/motorbike.jpg');
+  }
+
+  .yellow-rectangle {
+    position: absolute;
+
+    top: 322px;
+    right: calc(50% - 431px);
+    width: 138px;
+    height: 383px;
+
+    box-shadow: 0 0 88px 0 rgba(0, 0, 0, 0.1);
+    background-color: #f7e611;
+
+    z-index: 10;
+  }
+
+  .yellow-rectangle__thirteen {
+    position: absolute;
+
+    bottom: 27px;
+    left: 23px;
+
+    font-size: 45px;
+    letter-spacing: 4.5px;
+    font-family: "Geometria";
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .yellow-rectangle__thirteen::after {
+    position: relative;
+
+    content: "";
+    bottom: 0;
+    display: inline-block;
+    height: 3px;
+    right: -4px;
+    width: 17px;
+
+    background-color: #000;
+  }
+
+  .yellow-rectangle__seven {
+    position: absolute;
+
+    bottom: 15px;
+    display: block;
+    left: 78px;
+
+    font-family: "Geometria";
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    line-height: normal;
+  }
+
+  .yellow-rectangle__nav-back {
+    position: absolute;
+    top: 230px;
+    left: -35px;
+
+    width: 20px;
+    height: 36px;
+
+    background: url('../img/left-arrow.svg');
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+  }
+
+  .yellow-rectangle__nav-forward {
+    position: absolute;
+    top: 230px;
+    right: -40px;
+
+    width: 20px;
+    height: 36px;
+
+    background: url('../img/right-arrow.svg');
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+  }
+
+  .text {
+    position: absolute;
+  }
+
+  .text__test {
+    left: -36px;
+    top: 460px;
+
+    vertical-align: middle;
+    font-family: 'Geometria';
+    font-size: 12px;
+    font-style: italic;
+    line-height: 20px;
+    letter-spacing: 0.44px;
+    color: #000000;
+
+    opacity: 0.4;
+    transform: rotate(-90deg);
+  }
+
+  .text__number {
+    left: calc(50% - 505px);
+
+    font-family: 'Geometria';
+    font-size: 14px;
+    font-weight: 300;
+    color: #000000;
+  }
+
+  .text__number--1 {
+    top: 248px;
+  }
+
+  .text__number--3 {
+    top: 329px;
+  }
+
+  .text__big-number {
+    top: 194px;
+    left: calc(50% - 168px);
+
+    font-family: 'Geometria';
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 2.8px;
+    color: #000000;
+
+    transform: rotate(-90deg);
+    opacity: 0.5;
+
+    z-index: 5;
+  }
+
+  .text__circle {
+    padding: 29px 22px;
+    top: 284px;
+    left: calc(50% - 141px);
+    width: 85px;
+    height: 100px;
+
+    font-family: 'Geometria';
+    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 1.41;
+    letter-spacing: 2.14px;
+    color: #ffffff;
+
+    background-image: url('../img/circle-design.png');
+    background-repeat: no-repeat;
+
+    z-index: 5;
+  }
+
+  .text__slogan {
+    left: calc(50% - 446px);
+    top: 550px;
+
+    font-family: 'Philosopher';
+    font-size: 9px;
+    font-style: italic;
+    color: #000000;
+
+    opacity: 0.5;
+    transform: rotate(-90deg);
+
+    z-index: 5;
+  }
+
+  .rectangle {
+    position: absolute;
+    top: 333px;
+    left: calc(50% - 380px);
+  
+    width: 177px;
+    height: 282px;
+
+    background: url('../img/rectangle-design.png');
+
+    z-index: 5;
+  }
+
+  .olive-branch {
+    position: relative;
+    z-index: 3;
+  }
+
+  .olive-branch__pic {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: calc(50% - 60px);
+  }
+
+  .olive-branch::after {
+    background-color: #f8eb4c;
+    content: "";
+    display: block;
+    height: 10px;
+    left: calc(50% - 213px/2);
+    position: absolute;
+    top: 112px;
+    width: 213px;
+  }
+
+  .letters__design {
+    position: absolute;
+
+    text-transform: uppercase;
+  }
+
+  .letters__letter-a--big {
+    top: 105px;
+    right: 405px;
+
+    font-family: 'Geometria-Medium';
+    font-size: 80px;
+    line-height: 117px;
+  }
+
+  .letters__letter-a--medium {
+    top: 80px;
+    left: 25px;
+
+    font-family: 'Philosopher-Bold';
+    font-size: 35px;
+    line-height: 70px;
+  }
+
+  .letters__letter-a--small--first {
+    bottom: -65px;
+    right: calc(50% + 445px);
+
+    font-family: 'Philosopher-Bold';
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .letters__letter-a--small--second {
+    bottom: -45px;
+    right: calc(50% - 218px);
+
+    font-family: 'Philosopher-Bold';
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .letters__letter-f--first {
+    bottom: -30px;
+    right: calc(50% + 383px);
+
+    font-family: 'Philosopher-Bold';
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .letters__letter-f--second {
+    bottom: -75px;
+    right: calc(50% + 320px);
+
+    font-family: 'Philosopher-Bold';
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .letters__letter-e--big {
+    top: 185px;
+    right: 240px;
+    font-family: 'Geometria-Medium';
+    font-size: 80px;
+    line-height: 117px;
+
+    z-index: 2;
+  }
+
+  .letters__letter-e--small {
+    bottom: -80px;
+    right: calc(50% - 430px);
+
+    font-family: 'Philosopher-Bold';
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .letters__letter-g--big {
+    top: 265px;
+    right: 320px;
+
+    font-family: 'Geometria-Medium';
+    font-size: 80px;
+    line-height: 117px;
+
+    z-index: 2;
+  }
+
+  .letters__letter-g--small {
+    bottom: -51px;
+    right: calc(50% - 321px);
+
+    font-family: 'Philosopher-Bold';
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .letters__letter-i {
+    bottom: -45px;
+    right: calc(50% + 265px);
+
+    font-family: 'Philosopher-Bold';
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .letters__letter-n {
+    bottom: -87px;
+    right: calc(50% + 190px);
+
+    font-family: 'Philosopher-Bold';
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .triangle {
+    position: absolute;
+  }
+
+  .triangle__light-first {
+    bottom: -102px;
+    left: calc(50% - 277px);
+  }
+
+  .triangle__light-second {
+    bottom: -73px;
+    right: calc(50% - 261px);
+  }
+
+  .triangle__dark-first {
+    bottom: -10px;
+    left: 185px;
+  }
+
+  .triangle__dark-second {
+    bottom: -53px;
+    right: 224px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .logo,
+  .yellow-rectangle__seven,
+  .letters__letter-a--small--first,
+  .letters__letter-a--small--second,
+  .letters__letter-e--small,
+  .letters__letter-g--small,
+  .letters__letter-f--first,
+  .letters__letter-f--second,
+  .letters__letter-i,
+  .letters__letter-n,
+  .text__circle,
+  .text__test,
+  .text__number--3,
+  .text__number--1,
+  .text__big-number,
+  .rectangle,
+  .triangle__dark-second,
+  .triangle__light-second,
+  .olive-branch__pic {
+    display: none;
+  }
+
+
+  body {
+    background-color: #f7e611;
+
+    margin: 0;
+  }
+
+  .visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    -webkit-clip-path: inset(100%);
+
+            clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .site-wrapper {
+    width: 320px;
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    position: relative;
+  }
+
+  .slider {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slider__first-slide {
+    position: relative;
+
+    width: 236px;
+    height: 184px;
+    margin-bottom: -17px;
+    margin-top: 96px;
+    
+    background-image: url('../img/hall.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  .slider__first-slide::before {
+    content: '';
+
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    left: 0px;
+
+    position: absolute;
+
+    background-color: #f7e611;
+
+    opacity: 0.8;
+  }
+
+  .slider__second-slide {
+    position: relative;
+
+    width: 320px;
+    height: 318px;
+    
+    background-image: url('../img/motorbike.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    
+    z-index: 5;
+  }
+
+  .slider__second-slide::before {
+    content: '';
+
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    position: absolute;
+
+    background-color: #f7e611;
+
+    opacity: 0.8;
+  }
+
+  .letters__design {
+    position: absolute;
+
+    text-transform: uppercase;
+  }
+
+  .main-nav__toggle {
+    position: absolute;
+
+    top: 33px;
+    right: 22px;
+
+    width: 20px;
+    height: 14px;
+
+    background: url('../img/burger-menu-mob.svg');
+    background-repeat: no-repeat;
+    border: none;
+
+    cursor: pointer;
+  }
+
+  .main-nav__toggle::before {
+    content: "";
+
+    position: absolute;
+
+    width: 177px;
+    height: 282px;
+    top: -115px;
+    right: -96px;
+
+    z-index: -1;
+
+    background: url('../img/rectangle-design.png');
+    transform: rotate(90deg);
+  }
+
+  .letters__letter-e--big {
+    top: 140px;
+    right: 66px;
+
+    font-family: 'Geometria';
+    font-size: 60px;
+    line-height: 1.45;
+
+    z-index: 2;
+  }
+
+  .letters__letter-g--big {
+    top: 218px;
+    right: 128px;
+
+    font-family: 'Geometria';
+    font-size: 60px;
+    line-height: 1.45;
+
+    z-index: 2;
+  }
+
+  .letters__letter-a--big {
+    top: 234px;
+    left: 68px;
+
+    font-family: 'Geometria';
+    font-size: 60px;
+    line-height: 1.45;
+
+    z-index: 6;
+  }
+
+  .letters__letter-a--medium {
+    top: 8px;
+    left: 17px;
+
+    font-family: 'Philosopher-Bold';
+    font-size: 35px;
+    line-height: 70px;
+  }
+
+  .yellow-rectangle__thirteen {
+    position: absolute;
+    bottom: 17px;
+    right: 20px;
+
+    letter-spacing: 2px;
+    font-family: "Geometria";
+    font-style: italic;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.45;
+
+    z-index: 10;
+  }
+
+  .yellow-rectangle__thirteen::before {
+    content: "";
+
+    position: absolute;
+
+    width: 106px;
+    height: 106px;
+    bottom: -18px;
+    right: -21px;
+
+    z-index: -1;
+
+    background: url('../img/Rectangle_20.png');
+    transform: rotate(0deg);
+  }
+
+  .olive-branch::before {
+    content: "";
+
+    position: absolute;
+
+    left: 105px;
+    bottom: 0px;
+    width: 110px;
+    height: 53px;
+
+    z-index: 15;
+
+    background: url('../img/olive-branch-mob.svg');
+  }
+
+  .triangle {
+    position: absolute;
+  }
+
+  .triangle__light-first {
+    bottom: 28px;
+    left: 43px;
+
+    z-index: 10;
+  }
+
+  .triangle__dark-first {
+    top: 239px;
+    right: 30px;
+  }
+
+  .yellow-rectangle__nav-back {
+    position: absolute;
+
+    top: 408px;
+    left: 17px;
+
+    width: 20px;
+    height: 36px;
+
+    opacity: 0.4;
+
+    background: url('../img/left-arrow.svg');
+    background-repeat: no-repeat;
+    border: none;
+
+    z-index: 15;
+    cursor: pointer;
+  }
+
+  .yellow-rectangle__nav-forward {
+    position: absolute;
+    top: 408px;
+    right: 22px;
+
+    width: 20px;
+    height: 36px;
+
+    opacity: 0.4;
+
+    background: url('../img/right-arrow.svg');
+    background-repeat: no-repeat;
+    border: none;
+
+    z-index: 15;
+    cursor: pointer;
+  }
+
+  .text__slogan {
+    position: absolute;
+
+    left: -23px;
+    top: 245px;
+
+    opacity: 0.5;
+    font-family: 'Philosopher';
+    font-size: 9px;
+    font-style: italic;
+    color: #000000;
+    transform: rotate(-90deg);
+
+    z-index: 15;
+  }
+
+  .first-image {
+    background-image: url('../img/hall.jpg');
+  }
+
+  .second-image {
+    background-image: url('../img/motorbike.jpg');
+  }
+}
+
